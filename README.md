@@ -22,17 +22,7 @@ Las solicitudes llegaban por correo o se registraban en archivos de Excel. Esto 
 
 ## Flujo principal
 
-```mermaid
-flowchart LR
-    A[Usuario registra solicitud] --> B[Validación de datos]
-    B --> C[Registro en SharePoint]
-    C --> D[Asignación del aprobador]
-    D --> E{Decisión}
-    E -->|Aprobar| F[Notificar aprobación]
-    E -->|Rechazar| G[Registrar motivo y notificar]
-    F --> H[Actualizar trazabilidad]
-    G --> H
-```
+![Flujo principal de registro y aprobación de solicitudes](docs/flujo-principal.svg)
 
 ## Contenido del repositorio
 

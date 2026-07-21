@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="390" viewBox="0 0 1400 390" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Flujo principal de solicitudes</title>
+  <desc id="descripcion">Registro, validación, almacenamiento, asignación, decisión y actualización de la trazabilidad.</desc>
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <style>
+      .fondo { fill: #f8fafc; }
+      .caja { fill: #ffffff; stroke: #0f6cbd; stroke-width: 2; rx: 10; }
+      .decision { fill: #fff7ed; stroke: #ca5010; stroke-width: 2; }
+      .texto { fill: #1e293b; font-family: "Segoe UI", Arial, sans-serif; font-size: 17px; font-weight: 600; text-anchor: middle; }
+      .etiqueta { fill: #475569; font-family: "Segoe UI", Arial, sans-serif; font-size: 15px; font-weight: 600; text-anchor: middle; }
+      .linea { fill: none; stroke: #475569; stroke-width: 2.5; marker-end: url(#flecha); }
+      .aprobar { fill: #107c10; }
+      .rechazar { fill: #a4262c; }
+    </style>
+  </defs>
+
+  <rect class="fondo" x="1" y="1" width="1398" height="388" rx="14" stroke="#e2e8f0"/>
+
+  <rect class="caja" x="30" y="145" width="170" height="80"/>
+  <text class="texto" x="115" y="177"><tspan x="115">Usuario registra</tspan><tspan x="115" dy="23">la solicitud</tspan></text>
+
+  <rect class="caja" x="250" y="145" width="170" height="80"/>
+  <text class="texto" x="335" y="177"><tspan x="335">Validación</tspan><tspan x="335" dy="23">de datos</tspan></text>
+
+  <rect class="caja" x="470" y="145" width="180" height="80"/>
+  <text class="texto" x="560" y="177"><tspan x="560">Registro en</tspan><tspan x="560" dy="23">SharePoint</tspan></text>
+
+  <rect class="caja" x="700" y="145" width="190" height="80"/>
+  <text class="texto" x="795" y="177"><tspan x="795">Asignación del</tspan><tspan x="795" dy="23">aprobador</tspan></text>
+
+  <polygon class="decision" points="985,125 1060,185 985,245 910,185"/>
+  <text class="texto" x="985" y="191">Decisión</text>
+
+  <rect class="caja" x="1120" y="45" width="230" height="80"/>
+  <text class="texto" x="1235" y="77"><tspan x="1235">Notificar</tspan><tspan x="1235" dy="23">aprobación</tspan></text>
+
+  <rect class="caja" x="1120" y="265" width="230" height="80"/>
+  <text class="texto" x="1235" y="297"><tspan x="1235">Registrar motivo</tspan><tspan x="1235" dy="23">y notificar</tspan></text>
+
+  <rect class="caja" x="1120" y="155" width="230" height="80"/>
+  <text class="texto" x="1235" y="187"><tspan x="1235">Actualizar</tspan><tspan x="1235" dy="23">trazabilidad</tspan></text>
+
+  <path class="linea" d="M 200 185 H 250"/>
+  <path class="linea" d="M 420 185 H 470"/>
+  <path class="linea" d="M 650 185 H 700"/>
+  <path class="linea" d="M 890 185 H 910"/>
+  <path class="linea" d="M 1015 145 C 1045 90, 1070 85, 1120 85"/>
+  <path class="linea" d="M 1015 225 C 1045 280, 1070 305, 1120 305"/>
+  <path class="linea" d="M 1235 125 V 155"/>
+  <path class="linea" d="M 1235 265 V 235"/>
+
+  <text class="etiqueta aprobar" x="1060" y="90">Aprobar</text>
+  <text class="etiqueta rechazar" x="1060" y="300">Rechazar</text>
+</svg>
