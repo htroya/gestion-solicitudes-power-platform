@@ -42,8 +42,7 @@ gestion-solicitudes-power-platform/
 ├── docs/                         Arquitectura y modelo de datos
 ├── power-apps/                   Fórmulas Power Fx comentadas
 ├── power-automate/               Diseño de los flujos
-├── sharepoint/                   Script de creación de listas
-└── RESPUESTA-POSTULACION.md      Respuesta breve para entrevistas
+└── sharepoint/                   Script de creación de listas
 ```
 
 ## Probar la demo
@@ -78,4 +77,3 @@ No se publican porcentajes inventados. En una implementación real, los resultad
 ## Autor
 
 Hernán Troya — [GitHub](https://github.com/htroya)
-
