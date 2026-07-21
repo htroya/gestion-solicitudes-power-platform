@@ -1,0 +1,112 @@
+:root {
+  color-scheme: light;
+  --azul: #0f6cbd;
+  --azul-oscuro: #0b4f8a;
+  --fondo: #f5f7fa;
+  --texto: #242424;
+  --borde: #d8dce2;
+  --verde: #107c10;
+  --rojo: #a4262c;
+  --naranja: #ca5010;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem max(1.5rem, calc((100vw - 1180px) / 2));
+  background: linear-gradient(125deg, #073b6f, var(--azul));
+  color: white;
+}
+
+.encabezado h1 { margin: .35rem 0; }
+.encabezado p { margin: 0; opacity: .88; }
+.marca { font-size: .85rem; font-weight: 600; letter-spacing: .04em; }
+
+.contenedor {
+  display: grid;
+  grid-template-columns: minmax(280px, 380px) 1fr;
+  gap: 1.25rem;
+  max-width: 1180px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  align-items: start;
+}
+
+.tarjeta {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .06);
+  padding: 1.25rem;
+}
+
+.tarjeta h2 { margin-top: 0; }
+label { display: block; margin: .85rem 0 .35rem; font-weight: 600; }
+
+input, select, textarea {
+  width: 100%;
+  border: 1px solid #a9afb7;
+  border-radius: 6px;
+  padding: .72rem;
+  font: inherit;
+  background: white;
+}
+
+textarea { resize: vertical; }
+input:focus, select:focus, textarea:focus { outline: 2px solid #9ac8f5; border-color: var(--azul); }
+.fila { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+
+.boton {
+  border: 0;
+  border-radius: 6px;
+  margin-top: 1rem;
+  padding: .7rem 1rem;
+  background: var(--azul);
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton:hover { background: var(--azul-oscuro); }
+.boton-secundario { align-self: start; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.55); }
+.boton-aprobar { background: var(--verde); }
+.boton-rechazar { background: var(--rojo); }
+
+.titulo-listado { display: flex; justify-content: space-between; gap: 1rem; align-items: start; }
+.titulo-listado select { width: auto; }
+.texto-suave { color: #616161; margin-top: -.5rem; }
+.lista { display: grid; gap: .85rem; }
+
+.solicitud { border: 1px solid var(--borde); border-radius: 8px; padding: 1rem; }
+.solicitud-cabecera { display: flex; justify-content: space-between; gap: 1rem; }
+.solicitud h3 { margin: .15rem 0 0; }
+.codigo { color: #616161; font-size: .8rem; font-weight: 700; }
+.estado { align-self: start; border-radius: 999px; padding: .3rem .65rem; color: white; font-size: .82rem; font-weight: 700; }
+.estado-pendiente { background: var(--naranja); }
+.estado-aprobada { background: var(--verde); }
+.estado-rechazada { background: var(--rojo); }
+.metadatos { color: #616161; font-size: .88rem; }
+.acciones { display: flex; gap: .5rem; }
+.acciones .boton { margin-top: .8rem; }
+.historial { margin: .9rem 0 0; padding: .8rem 0 0 1.2rem; border-top: 1px solid #ececec; color: #555; font-size: .85rem; }
+.vacio { text-align: center; padding: 2rem; color: #616161; }
+
+@media (max-width: 800px) {
+  .encabezado { flex-direction: column; }
+  .contenedor { grid-template-columns: 1fr; }
+  .fila { grid-template-columns: 1fr; }
+  .titulo-listado { flex-direction: column; }
+  .titulo-listado select { width: 100%; }
+}
+

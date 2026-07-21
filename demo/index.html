@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestión de solicitudes</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div>
+      <span class="marca">Microsoft Power Platform · Demo</span>
+      <h1>Gestión de solicitudes internas</h1>
+      <p>Registro, aprobación y trazabilidad en un solo lugar.</p>
+    </div>
+    <button id="botonReiniciar" class="boton boton-secundario">Restablecer demo</button>
+  </header>
+
+  <main class="contenedor">
+    <section class="tarjeta">
+      <h2>Nueva solicitud</h2>
+      <form id="formularioSolicitud">
+        <label for="asunto">Asunto</label>
+        <input id="asunto" name="asunto" maxlength="80" required>
+
+        <div class="fila">
+          <div>
+            <label for="categoria">Categoría</label>
+            <select id="categoria" name="categoria" required>
+              <option value="">Seleccione</option>
+              <option>Acceso</option>
+              <option>Compra</option>
+              <option>Soporte</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div>
+            <label for="prioridad">Prioridad</label>
+            <select id="prioridad" name="prioridad" required>
+              <option>Baja</option>
+              <option selected>Media</option>
+              <option>Alta</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+        <button class="boton" type="submit">Registrar solicitud</button>
+      </form>
+    </section>
+
+    <section class="tarjeta tarjeta-amplia">
+      <div class="titulo-listado">
+        <div>
+          <h2>Solicitudes</h2>
+          <p id="resumen" class="texto-suave"></p>
+        </div>
+        <select id="filtroEstado" aria-label="Filtrar por estado">
+          <option value="Todos">Todos los estados</option>
+          <option>Pendiente</option>
+          <option>Aprobada</option>
+          <option>Rechazada</option>
+        </select>
+      </div>
+      <div id="listaSolicitudes" class="lista"></div>
+    </section>
+  </main>
+
+  <template id="plantillaSolicitud">
+    <article class="solicitud">
+      <div class="solicitud-cabecera">
+        <div>
+          <span class="codigo"></span>
+          <h3 class="asunto"></h3>
+        </div>
+        <span class="estado"></span>
+      </div>
+      <p class="descripcion"></p>
+      <div class="metadatos"></div>
+      <div class="acciones">
+        <button class="boton boton-aprobar">Aprobar</button>
+        <button class="boton boton-rechazar">Rechazar</button>
+      </div>
+      <ol class="historial"></ol>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
